@@ -21,7 +21,7 @@ http.createServer(function (request, response) {
 		
 		
              resp.writeHead(200, "operation  successfull", { "Content-Type": "application/json" });
-             resp.write(JSON.stringify({ fulfillmentText :obj.queryResult.queryText }));
+             resp.write(JSON.stringify({ "fulfillmentText" :obj.queryResult.queryText }));
              resp.end();
            
             break;
