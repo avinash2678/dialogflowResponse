@@ -2,6 +2,9 @@
 var http = require("http");
 var applicationResouces = require("./applicationResouces");
 const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+admin.initializeApp(functions.config().firebase);
+
 const {WebhookClient} = require('dialogflow-fulfillment');
 const {Card, Suggestion} = require('dialogflow-fulfillment');
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
